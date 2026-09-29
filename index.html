@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ZS WEB | استوديو تطوير رقمي – مواقع وتطبيقات ذكية</title>
+<meta name="description" content="ZS WEB استوديو تطوير رقمي: مواقع إلكترونية، صفحات هبوط، تطبيقات مدعومة بالذكاء الاصطناعي وحلول رقمية مخصصة.">
+<meta property="og:title" content="ZS WEB – Build. Launch. Grow."><meta property="og:description" content="Websites, landing pages, AI apps and custom digital solutions."><meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0d14;--card:#111621;--line:#1f2838;--tx:#eef2f8;--mu:#93a0b8;--blue:#0a9bff;--cy:#12e6e0;--vi:#7c4dff;--g:linear-gradient(120deg,var(--blue),var(--vi));box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 16px/1.7 Cairo,Inter,system-ui,sans-serif;overflow-x:hidden}
+html[lang=en] body{font-family:Inter,Cairo,sans-serif}
+a{color:inherit;text-decoration:none}h1,h2,h3,p{margin:0}
+.w{max-width:1140px;margin:auto;padding:0 20px}
+section{padding:88px 0;position:relative}
+h2{font-size:clamp(26px,4vw,38px);font-weight:800;line-height:1.3}
+.sub{color:var(--mu);margin-top:8px;max-width:560px}
+.lab{font:600 13px Inter,sans-serif;color:var(--cy);letter-spacing:.12em;margin-bottom:10px}
+.hd{margin-bottom:40px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;border-radius:12px;font-weight:600;border:1px solid var(--line);background:transparent;color:var(--tx);cursor:pointer;font-family:inherit;font-size:16px;transition:box-shadow .25s,border-color .25s}
+.btn:hover{border-color:var(--blue)}
+.btn.p{background:var(--g);border:0}.btn.p:hover{box-shadow:0 0 28px rgba(10,155,255,.45)}
+:focus-visible{outline:2px solid var(--cy);outline-offset:3px}
+header{position:sticky;top:0;z-index:50;background:rgba(10,13,20,.8);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:20px;height:68px}
+.logo{display:flex;align-items:center;gap:10px;font:800 20px Inter,sans-serif;letter-spacing:.06em}
+.logo img{height:44px;width:auto;border-radius:8px}
+nav{display:flex;gap:22px;margin-inline:auto;font-size:15px;color:var(--mu)}
+nav a:hover{color:var(--tx)}
+.lang{display:flex;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.lang button{background:none;border:0;color:var(--mu);padding:8px 12px;cursor:pointer;font:600 13px Inter}
+.lang button.on{background:var(--line);color:var(--tx)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:10px;width:44px;height:44px;color:var(--tx);cursor:pointer}
+.hero{padding:72px 0 56px;overflow:hidden}
+#pc{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.hero .w{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.glow{position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(124,77,255,.28),transparent 65%);top:-100px;inset-inline-start:-120px;animation:pulse 8s ease-in-out infinite alternate}
+@keyframes pulse{to{transform:scale(1.2);opacity:.6}}
+.hero h1{font-size:clamp(38px,6vw,64px);font-weight:800;line-height:1.2;margin:14px 0}
+.hl{background:linear-gradient(120deg,var(--cy),var(--blue),var(--vi));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--mu);font-size:18px;max-width:520px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.stage{position:relative;height:380px}
+.lap{position:absolute;inset-inline-start:0;top:20px;width:88%;background:#0d121c;border:1px solid var(--line);border-radius:14px;padding:10px;box-shadow:0 30px 60px rgba(0,0,0,.5)}
+.dots{display:flex;gap:5px;margin-bottom:8px}.dots i{width:8px;height:8px;border-radius:50%;background:var(--line)}
+.scr{height:200px;border-radius:8px;background:linear-gradient(160deg,#101a2e,#160f2e);padding:16px;direction:ltr;text-align:left}
+.scr b{display:block;height:10px;width:55%;border-radius:5px;background:var(--g);margin-bottom:10px}
+.scr s{display:block;height:6px;border-radius:3px;background:var(--line);margin-bottom:7px;text-decoration:none}
+.scr code{display:block;font:12px monospace;color:var(--cy);margin-top:14px}
+.scr .bx{display:flex;gap:8px;margin-top:14px}.scr .bx u{flex:1;height:48px;border-radius:8px;border:1px solid var(--line);background:rgba(255,255,255,.03)}
+.base{height:10px;margin:0 -14px;border-radius:0 0 14px 14px;background:#182033}
+.ph{position:absolute;inset-inline-end:0;bottom:0;width:132px;height:250px;background:#0d121c;border:1px solid #2a3550;border-radius:24px;padding:12px;box-shadow:0 30px 60px rgba(0,0,0,.6);animation:fl 6s ease-in-out infinite alternate;direction:ltr}
+@keyframes fl{to{transform:translateY(-10px)}}
+.ph div{height:100%;border-radius:14px;background:linear-gradient(170deg,#0a2a4a,#26165a);padding:12px;font:600 11px Inter;color:var(--cy)}
+.ph em{display:block;margin-top:10px;height:34px;border-radius:8px;background:rgba(255,255,255,.08)}
+.ph em:first-of-type{background:var(--g);opacity:.7}
+.q{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:0 0 20px}
+.q div{border:1px solid var(--line);border-radius:14px;padding:18px;background:rgba(17,22,33,.6)}
+.q h3{font:600 16px Inter}.q p{color:var(--mu);font-size:14px;line-height:1.5;margin-top:4px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;display:flex;flex-direction:column;gap:12px;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-5px);border-color:#2f4a80}
+.card h3{font:600 20px Inter,sans-serif}.card p{color:var(--mu);font-size:15px}
+.ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:rgba(10,155,255,.12);color:var(--cy);font-size:20px}
+.card ul{list-style:none;padding:0;margin:0;font:14px Inter;color:#c4cee0;display:grid;gap:4px;direction:ltr;text-align:left}
+.card li::before{content:"✓ ";color:var(--cy)}
+html[dir=rtl] .card ul{direction:rtl;text-align:right}
+.pr{font-weight:600;color:var(--cy);border-top:1px solid var(--line);padding-top:10px}
+.card a{margin-top:auto;color:var(--blue);font-weight:600}
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative}
+.tl::before{content:"";position:absolute;top:22px;inset-inline:6%;height:2px;background:var(--g);transform-origin:right;transform:scaleX(0);transition:transform 1.4s ease}
+html[dir=ltr] .tl::before{transform-origin:left}
+.tl.in::before{transform:scaleX(1)}
+.st{position:relative}
+.st span{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--bg);border:2px solid var(--blue);font:600 14px Inter;margin-bottom:14px;position:relative}
+.st h3{font-size:19px}.st p{color:var(--mu);font-size:15px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.why{display:flex;gap:14px;padding:20px;border:1px solid var(--line);border-radius:16px}
+.why .ic{flex:none;color:var(--vi);background:rgba(124,77,255,.12)}
+.pv{height:150px;border-radius:12px;background:linear-gradient(140deg,#0e2a4d,#24145a);position:relative;overflow:hidden}
+.pv::after{content:"";position:absolute;inset:26px 30px auto;height:14px;border-radius:7px;background:rgba(255,255,255,.14);box-shadow:0 26px 0 -2px rgba(255,255,255,.08),0 52px 0 -4px rgba(18,230,224,.3)}
+.tag{font:600 12px Inter;color:var(--cy);border:1px solid var(--line);border-radius:20px;padding:2px 10px;align-self:flex-start}
+.cs{margin:0 20px}.cbox{max-width:1100px;margin:auto;text-align:center;border:1px solid var(--line);border-radius:28px;padding:72px 24px;background:radial-gradient(ellipse at 30% 0,rgba(10,155,255,.18),transparent 60%),radial-gradient(ellipse at 80% 100%,rgba(124,77,255,.22),transparent 60%),var(--card)}
+.cbox .cta{justify-content:center}.cbox p{color:var(--mu);margin:12px auto 0;max-width:520px}
+.ct{display:grid;grid-template-columns:1.3fr 1fr;gap:32px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.f{display:grid;gap:6px;font-size:14px;color:var(--mu)}.f.full{grid-column:1/-1}
+input,select,textarea{background:var(--card);border:1px solid var(--line);border-radius:10px;color:var(--tx);padding:12px 14px;font:16px inherit;font-family:inherit;min-height:48px;width:100%}
+textarea{min-height:120px;resize:vertical}
+#ok{grid-column:1/-1;color:var(--cy);display:none}
+.ways{display:grid;gap:12px;align-content:start}
+.ways a{display:flex;gap:12px;align-items:center;padding:16px;border:1px solid var(--line);border-radius:14px;min-height:56px}
+.ways a:hover{border-color:var(--blue)}.ways small{display:block;color:var(--mu);font-size:13px;direction:ltr}
+footer{border-top:1px solid var(--line);padding:48px 0 28px;color:var(--mu)}
+.fg{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap}
+.fl{display:flex;flex-wrap:wrap;gap:8px 20px}.fl a:hover{color:var(--tx)}
+.soc{display:flex;gap:10px;margin-top:14px}.soc a{width:44px;height:44px;border:1px solid var(--line);border-radius:12px;display:grid;place-items:center;font:600 12px Inter}
+.cp{margin-top:32px;font:13px Inter;text-align:center;direction:ltr}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+@media(max-width:900px){
+nav{position:fixed;inset:calc(68px + env(safe-area-inset-top,0px)) 0 auto;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 20px 16px;transform:translateY(-12px);opacity:0;pointer-events:none;transition:.25s;margin:0}
+nav.open{transform:none;opacity:1;pointer-events:auto}
+nav a{padding:14px 0;font-size:17px;border-bottom:1px solid var(--line)}
+.burger{display:block;margin-inline-start:auto}.lang{order:2}.nav .btn{display:none}
+.hero .w,.ct{grid-template-columns:1fr}.stage{height:320px}
+.q,.g4{grid-template-columns:1fr 1fr}.tl{grid-template-columns:1fr 1fr;row-gap:32px}.tl::before{display:none}.g3{grid-template-columns:1fr 1fr}
+section{padding:64px 0}}
+@media(max-width:560px){.q,.g4,.g3,.tl,form{grid-template-columns:1fr}.hero .btn{flex:1}.logo span{display:none}.stage{height:300px}.ph{width:110px;height:210px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}.tl::before{transform:none}}
+</style></head><body>
+<header><div class="w nav">
+<a href="#home" class="logo"><img src="data:image/webp;base64,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" alt="ZS WEB logo"><span>ZS WEB</span></a>
+<nav id="nav"><a href="#home" data-en="Home">الرئيسية</a><a href="#services" data-en="Services">الخدمات</a><a href="#process" data-en="How we work">كيف نعمل</a><a href="#work" data-en="Portfolio">أعمالنا</a><a href="#why" data-en="About">من نحن</a><a href="#contact" data-en="Contact">تواصل معنا</a></nav>
+<a href="#contact" class="btn p" data-en="Start your project">ابدأ مشروعك الآن</a>
+<div class="lang" role="group" aria-label="Language"><button data-l="ar" class="on">AR</button><button data-l="en">EN</button></div>
+<button class="burger" id="bg" aria-label="Menu" aria-expanded="false">☰</button>
+</div></header>
+<main>
+<section class="hero" id="home"><canvas id="pc" aria-hidden="true"></canvas><div class="glow"></div>
+<div class="w"><div>
+<div class="lab">CODE / DESIGN / INNOVATE</div>
+<h1 data-en="Turn your idea into a <span class='hl'>digital product</span>">حوّل فكرتك إلى <span class="hl">منتج رقمي</span></h1>
+<p data-en="We build websites, landing pages and smart apps with the latest web and AI technologies.">نطوّر مواقع إلكترونية، صفحات هبوط وتطبيقات ذكية باستخدام أحدث تقنيات الويب والذكاء الاصطناعي.</p>
+<div class="cta"><a href="#contact" class="btn p" data-en="Request your project">اطلب مشروعك</a><a href="#work" class="btn" data-en="See our work">شاهد أعمالنا</a></div></div>
+<div class="stage" role="img" aria-label="ZS WEB workspace mockup: laptop and phone">
+<div class="lap"><div class="dots"><i></i><i></i><i></i></div><div class="scr"><b></b><s style="width:80%"></s><s style="width:62%"></s><code>&lt;ZSWEB /&gt; build.launch.grow</code><div class="bx"><u></u><u></u><u></u></div></div><div class="base"></div></div>
+<div class="ph"><div>ZS WEB<em></em><em></em><em></em><span style="display:block;margin-top:10px">AI ✦</span></div></div></div>
+</div></section>
+
+<div class="w"><div class="q rv">
+<div><h3>🌐 Websites</h3><p data-en="Modern, fast websites">مواقع عصرية وسريعة</p></div>
+<div><h3>🚀 Landing Pages</h3><p data-en="High-converting landing pages">صفحات هبوط عالية التحويل</p></div>
+<div><h3>🤖 AI Apps</h3><p data-en="Apps and solutions powered by AI">تطبيقات وحلول مدعومة بالذكاء الاصطناعي</p></div>
+<div><h3>⚙️ Digital Solutions</h3><p data-en="Custom systems and digital solutions">أنظمة وحلول رقمية مخصصة</p></div></div></div>
+
+<section id="services"><div class="w"><div class="hd rv"><div class="lab">OUR SERVICES</div><h2 data-en="Digital solutions built for your project">حلول رقمية مصممة لمشروعك</h2><p class="sub" data-en="We turn your ideas into practical, modern, scalable digital products.">نحوّل أفكارك إلى منتجات رقمية عملية، عصرية وقابلة للتطوير.</p></div>
+<div class="g4">
+<article class="card rv"><div class="ic">🌐</div><h3>Websites</h3><p data-en="Professional websites that work on every device.">مواقع إلكترونية احترافية ومتجاوبة مع جميع الأجهزة.</p><ul><li>Responsive</li><li>Fast</li><li>Modern</li><li>SEO-ready</li></ul><div class="pr" data-k="web"></div><a href="#contact" data-en="Explore service">اكتشف الخدمة</a></article>
+<article class="card rv"><div class="ic">🚀</div><h3>Landing Pages</h3><p data-en="Pages designed to present your project and turn visitors into clients.">صفحات هبوط مصممة لتقديم مشروعك وتحويل الزوار إلى عملاء.</p><ul><li>Conversion-focused</li><li>Mobile friendly</li><li>Fast loading</li><li>Clear CTA</li></ul><div class="pr" data-k="land"></div><a href="#contact" data-en="Explore service">اكتشف الخدمة</a></article>
+<article class="card rv"><div class="ic">🤖</div><h3>AI Apps</h3><p data-en="Smart apps and solutions that use AI technologies.">تطبيقات وحلول ذكية تستفيد من تقنيات الذكاء الاصطناعي.</p><ul><li>AI integration</li><li>Smart workflows</li><li>Automation</li><li>Scalable architecture</li></ul><div class="pr" data-k="ai"></div><a href="#contact" data-en="Explore service">اكتشف الخدمة</a></article>
+<article class="card rv"><div class="ic">⚙️</div><h3>Digital Solutions</h3><p data-en="Web systems and dashboards that help you manage your business better.">أنظمة ويب ولوحات تحكم تساعدك على إدارة نشاطك بشكل أفضل.</p><ul><li>Dashboards</li><li>Management systems</li><li>Custom workflows</li><li>Business tools</li></ul><div class="pr" data-k="sol"></div><a href="#contact" data-en="Explore service">اكتشف الخدمة</a></article>
+</div></div></section>
+
+<section id="process"><div class="w"><div class="hd rv"><h2 data-en="How we work">كيف نعمل؟</h2><p class="sub" data-en="From idea to launch.">من الفكرة إلى الإطلاق.</p></div>
+<div class="tl" id="tl">
+<div class="st rv"><span>01</span><h3 data-en="Your idea">فكرتك</h3><p data-en="You tell us what you need and we understand your goals.">تخبرنا بما تحتاجه ونفهم أهداف مشروعك.</p></div>
+<div class="st rv"><span>02</span><h3 data-en="Planning">التخطيط</h3><p data-en="We define the features, structure and right solution.">نحدد الخصائص والبنية والحل المناسب.</p></div>
+<div class="st rv"><span>03</span><h3 data-en="Development">التطوير</h3><p data-en="We build and test the project step by step.">نبني المشروع ونختبره خطوة بخطوة.</p></div>
+<div class="st rv"><span>04</span><h3 data-en="Launch">الإطلاق</h3><p data-en="We hand you a project ready to use.">نسلّمك مشروعًا جاهزًا للاستخدام.</p></div></div></div></section>
+
+<section id="why"><div class="w"><div class="hd rv"><h2 data-en="Why ZS WEB?">لماذا ZS WEB؟</h2></div>
+<div class="g3">
+<div class="why rv"><div class="ic">🎯</div><p data-en="Custom solutions for each project">حلول مخصصة حسب المشروع</p></div>
+<div class="why rv"><div class="ic">⚡</div><p data-en="Built with modern technologies">تطوير باستخدام تقنيات حديثة</p></div>
+<div class="why rv"><div class="ic">📱</div><p data-en="Responsive on phone and desktop">تجربة متجاوبة على الهاتف والكمبيوتر</p></div>
+<div class="why rv"><div class="ic">📈</div><p data-en="Ready to scale and grow">قابلية التوسع والتطوير</p></div>
+<div class="why rv"><div class="ic">🤖</div><p data-en="AI integration when needed">دمج الذكاء الاصطناعي عند الحاجة</p></div>
+<div class="why rv"><div class="ic">💬</div><p data-en="Direct communication with you">تواصل مباشر مع العميل</p></div></div></div></section>
+
+<section id="work"><div class="w"><div class="hd rv"><h2 data-en="Our work">أعمالنا</h2><p class="sub" data-en="Samples of projects we are working on.">نماذج من المشاريع التي نعمل عليها.</p></div>
+<div class="g3">
+<article class="card rv"><div class="pv"></div><span class="tag" data-en="Prototype">مشروع تجريبي</span><h3>Business Website</h3><p data-en="Sample corporate website with responsive layout.">نموذج موقع تعريفي لشركة بتصميم متجاوب.</p><a href="#contact" data-en="View project">عرض المشروع</a></article>
+<article class="card rv"><div class="pv" style="filter:hue-rotate(40deg)"></div><span class="tag" data-en="Prototype">مشروع تجريبي</span><h3>Product Landing Page</h3><p data-en="Sample landing page focused on a single clear action.">نموذج صفحة هبوط تركز على إجراء واحد واضح.</p><a href="#contact" data-en="View project">عرض المشروع</a></article>
+<article class="card rv"><div class="pv" style="filter:hue-rotate(-40deg)"></div><span class="tag" data-en="Prototype">مشروع تجريبي</span><h3>AI Dashboard</h3><p data-en="Sample management dashboard with AI assistant.">نموذج لوحة تحكم مع مساعد ذكي.</p><a href="#contact" data-en="View project">عرض المشروع</a></article></div></div></section>
+
+<div class="cs rv"><div class="cbox"><h2 data-en="Got an idea? Let's build it.">لديك فكرة؟ دعنا نبنيها.</h2><p data-en="Tell us about your project and we'll help turn your idea into a practical digital solution.">أخبرنا عن مشروعك وسنساعدك على تحويل فكرتك إلى حل رقمي عملي.</p><div class="cta"><a href="#contact" class="btn p" data-en="Start your project">ابدأ مشروعك الآن</a><a href="#contact" class="btn" data-en="Contact us">تواصل معنا</a></div></div></div>
+
+<section id="contact"><div class="w"><div class="hd rv"><h2 data-en="Let's start your project">لنبدأ مشروعك</h2></div>
+<div class="ct"><form id="fm" class="rv">
+<label class="f"><span data-en="Name">الاسم</span><input required name="n" autocomplete="name"></label>
+<label class="f"><span data-en="Email">البريد الإلكتروني</span><input required type="email" name="e" autocomplete="email"></label>
+<label class="f"><span data-en="Phone">رقم الهاتف</span><input type="tel" name="p" autocomplete="tel"></label>
+<label class="f"><span data-en="Project type">نوع المشروع</span><select name="t"><option data-en="Website">موقع إلكتروني</option><option data-en="Landing page">صفحة هبوط</option><option data-en="AI app">تطبيق ذكاء اصطناعي</option><option data-en="Digital solution">حل رقمي</option></select></label>
+<label class="f full"><span data-en="Approximate budget">الميزانية التقريبية</span><select name="b"><option data-en="Not sure yet">غير محددة بعد</option><option>&lt; 500 $</option><option>500 – 2000 $</option><option>2000 $+</option></select></label>
+<label class="f full"><span data-en="Tell us about your project">أخبرنا عن مشروعك</span><textarea name="m"></textarea></label>
+<button class="btn p" type="submit" data-en="Send request">إرسال الطلب</button>
+<p id="ok" role="status" data-en="Thanks! Your request is ready — connect the form to your backend or email service to receive it.">شكرًا! تم تجهيز طلبك — اربط النموذج بخدمة البريد أو الخادم لاستلامه.</p></form>
+<div class="ways rv">
+<a href="https://www.facebook.com/share/19ejgHrFP9/"><b>📘</b><div>Facebook<small>facebook.com/share/19ejgHrFP9</small></div></a>
+<a href="mailto:thebakloj@gmail.com"><b>✉️</b><div>Email<small>thebakloj@gmail.com</small></div></a></div></div></div></section>
+</main>
+<footer><div class="w"><div class="fg"><div><div class="logo">ZS WEB</div><p style="font-family:Inter">Build. Launch. Grow.</p><p data-en="Digital solutions that help your project grow.">حلول رقمية تساعد مشروعك على النمو.</p>
+<div class="soc"><a href="https://www.facebook.com/share/19ejgHrFP9/" aria-label="Facebook">Fb</a><a href="mailto:thebakloj@gmail.com" aria-label="Email">@</a></div></div>
+<div class="fl"><a href="#home" data-en="Home">الرئيسية</a><a href="#services" data-en="Services">الخدمات</a><a href="#work" data-en="Portfolio">أعمالنا</a><a href="#why" data-en="About">من نحن</a><a href="#contact" data-en="Contact">تواصل معنا</a></div></div>
+<p class="cp">© 2026 ZS WEB. All rights reserved.</p></div></footer>
+<script>
+const $=s=>document.querySelectorAll(s),nav=document.getElementById('nav'),bg=document.getElementById('bg');
+const PRICES={web:"",land:"",ai:"",sol:""}; // ضع السعر هنا، مثال: web:"150 $" — اتركه فارغًا ليظهر "السعر حسب المشروع"
+$('.pr').forEach(e=>{const v=PRICES[e.dataset.k];e.innerHTML=v?'ابتداءً من '+v:'السعر حسب المشروع';e.dataset.en=v?'From '+v:'Custom quote'});
+
+bg.onclick=()=>{const o=nav.classList.toggle('open');bg.setAttribute('aria-expanded',o);bg.textContent=o?'✕':'☰'};
+$('nav a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');bg.textContent='☰'}));
+function setLang(l){const en=l==='en',d=document.documentElement;d.lang=l;d.dir=en?'ltr':'rtl';
+$('[data-en]').forEach(e=>{if(!e.dataset.ar)e.dataset.ar=e.innerHTML;e.innerHTML=en?e.dataset.en:e.dataset.ar});
+$('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.l===l));
+document.title=en?'ZS WEB | Digital Development Studio':'ZS WEB | استوديو تطوير رقمي – مواقع وتطبيقات ذكية'}
+$('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.l));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+$('.rv,#tl').forEach(e=>io.observe(e));
+document.getElementById('fm').onsubmit=e=>{e.preventDefault();document.getElementById('ok').style.display='block';e.target.reset()};
+(()=>{const c=document.getElementById('pc'),x=c.getContext('2d');if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+let w,h,P=[];const r=()=>{w=c.width=c.offsetWidth;h=c.height=c.offsetHeight;P=Array.from({length:Math.min(46,w/24|0)},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25}))};r();addEventListener('resize',r);
+(function f(){x.clearRect(0,0,w,h);P.forEach((p,i)=>{p.x=(p.x+p.vx+w)%w;p.y=(p.y+p.vy+h)%h;x.fillStyle='rgba(18,230,224,.5)';x.fillRect(p.x,p.y,2,2);
+for(let j=i+1;j<P.length;j++){const q=P[j],d=Math.hypot(p.x-q.x,p.y-q.y);if(d<120){x.strokeStyle=`rgba(10,155,255,${.14*(1-d/120)})`;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}}});requestAnimationFrame(f)})()})();
+</script></body></html>
